@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://hihlxrfyfsatqb:8dc01fa7ad439219c5eae1154c509cb119c7bb3f94b894593872eca088835908@ec2-23-23-151-191.compute-1.amazonaws.com:5432/dd4asq71jqle4q"
+  shadowDatabaseUrl = "postgres://oneawqvyklyqmh:64987aa2b2296e74c3b8c44c217361d91616eb86dfe8e44247613ccf098e4eda@ec2-18-204-142-254.compute-1.amazonaws.com:5432/dde17egojne9tf"
+}
+
+model Player {
+  id  String @id @default(uuid())
+  name String
+  team String
+  overall Int
+  outside Int
+  inside Int
+  defending Int
+  athleticism Int
+  playmaking Int
+  rebounding Int
+  total Int
+  closeShot Int
+  midRangeShot Int
+  threePointShot Int
+  freeThrow Int
+  shotIQ Int
+  offensiveConsistency Int
+  layup Int
+  standingDunk Int
+  drivingDunk Int
+  postHook Int
+  postFade Int
+  postControl Int
+  drawFoul Int
+  hands Int
+  interiorDefense Int
+  perimeterDefense Int
+  steal Int
+  block Int
+  lateralQuickness Int
+  helpDefenseIQ Int
+  passPerception Int
+  defensiveConsistency Int
+  speed Int
+  acceleration Int
+  strength Int
+  vertical Int
+  stamina Int
+  hustle Int
+  overallDurability Int
+  passAccuracy Int
+  ballHandle Int
+  speedWithBall Int
+  passIQ Int
+  passVision Int
+  offensiveRebound Int
+  defensiveRebound Int
+}
